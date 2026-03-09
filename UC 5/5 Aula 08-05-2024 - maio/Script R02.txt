@@ -1,0 +1,47 @@
+hostname R02
+!
+!
+!
+enable secret cisco
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ ip address 177.100.224.1 255.255.240.0
+ 
+!
+interface GigabitEthernet0/1
+ ip address 177.100.223.254 255.255.240.0
+ 
+!
+interface GigabitEthernet0/2
+ ip address 177.100.160.1 255.255.240.0
+ 
+!
+
+!
+!
+!
+banner motd @Acesso Restrito! Caia Fora seu Lixo!@
+!
+!
+!
+!
+line con 0
+ password class
+ login
+!
+line aux 0
+!
+line vty 0 4
+ password class
+ login
+!
+service password-encryption
+!
+end

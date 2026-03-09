@@ -1,0 +1,55 @@
+hostname R02
+!
+!
+!
+enable secret cisco
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ ip address 177.100.224.1 255.255.240.0
+ ipv6 address 2005:db8:d800::/38
+ no shutdown
+!
+interface GigabitEthernet0/1
+ ip address 177.100.223.254 255.255.240.0
+ ipv6 address 2005:db8:d7ff:ffff:ffff:ffff:ffff:ffff/38
+ no shutdown
+!
+interface GigabitEthernet0/2
+ ip address 177.100.160.1 255.255.240.0
+ ipv6 address 2005:db8:c800::/38
+ no shutdown
+!
+
+!
+!
+!
+banner motd @Acesso Restrito! Caia Fora seu Lixo!@
+!
+!
+!
+!
+line con 0
+ password class
+ login
+!
+line aux 0
+!
+line vty 0 4
+ password class
+ login
+!
+service password-encryption
+!
+ip route 177.100.128.0 255.255.240.0 177.100.208.1
+ip route 177.100.144.0 255.255.240.0 177.100.208.1
+ip route 177.100.176.0 255.255.240.0 177.100.239.254
+ip route 177.100.192.0 255.255.240.0 177.100.239.254
+!
+end

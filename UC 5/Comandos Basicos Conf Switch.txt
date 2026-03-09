@@ -1,0 +1,67 @@
+#####Criptografar as senhas existentes#####
+1º Passo - enable
+2º Passo - configure terminal
+3º Passo - service password-encryption
+
+#####Nome#####
+1º Passo - enable
+2º Passo - configure terminal
+3º Passo - hostname Roteador
+
+#####Senha Enable##### -> MODO EXEC
+1º Passo - enable 
+2º Passo - configure terminal
+3º Passo - enable password cisco (descriptgrafado) ou enable secret cisco (criptografado)
+
+#####Senha Console##### -> MODO USUÁRIO
+1º Passo - enable
+2º Passo - configure terminal
+3º Passo - line console 0
+4º Passo - password cisco
+5º Passo - login
+
+#####Senha VTY##### -> Senha Telnet
+1º Passo - enable
+2º Passo - configure terminal
+3º Passo - line vty 0 4
+4º Passo - password cisco
+5º Passo - login (habilita o equipamento a pedir a senha)
+
+#####Banner#####
+1º Passo - enable
+2º Passo - configure terminal 
+3º Passo - banner motd @Banner@
+
+#####Interface g 0/0 192.168.0.1#####
+1º Passo - enable
+2º Passo - configure terminal
+3º Passo - interface gigabitEthernet x/y
+4º Passo - ip address xxx.xxx.xxx.xxx xxx.xxx.xxx.xxx
+5º Passo - no shutdown  
+
+####Salvar Configuração######
+1º Passo - enable
+2º Passo - copy running-config startup-config
+
+#####Ver versão do SO######
+1º Passo enable
+2º Passo show version
+
+####Liberar SSH####
+1º enable
+2º configura terminal
+3º configurar nome do host
+hostname NomeDoHost
+4º setar nome do dominio
+ip domain-name cisco.com
+5º Criar chave criptografa
+crypto key generate rsa (gerar a chave criptografada)
+tamanho da chave : valor padrão usado é 1024
+7º criar usuário
+usarnme nome secret senha
+8º setar ssh como padrão
+line vty 0 4
+transport input ssh
+login local
+9º setar a versão mais recente
+ip ssh version 2
