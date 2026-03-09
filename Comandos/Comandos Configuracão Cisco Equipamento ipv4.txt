@@ -1,0 +1,37 @@
+configuracão cisco equipamento ipv4
+
+enable : para usar o privilegio (modo observar)
+
+show runnig-config : mostra as informações do equipamento
+
+configure terminal : modo de configuração global
+
+hostname : para mudar o nome (dentro do configure terminal) 
+
+enable  secret : para colocar a senha (dentro do configure terminal)
+
+line console 0 : para cofigurar o console (dentro do configure terminal)
+
+password : colocar a senha no console (dentro do line console 0) 
+
+login: para confirmar a senha (dentro do line console 0)
+
+line vty 0 4: (dentro do configure terminal)
+
+exit : voltar 
+
+banner motd : para colocar uma menssagem dentro do console . ex:banner motd @acesso restrito@ (dentro do configure terminal)
+
+service password-encryption : criptografar a senha (dentro do configure terminal)
+
+interface gigabitEthernet 0/ : configurar ip (dentro do configure terminal)
+
+ip address : colocar o ip (dentro do interface gigabitEthernet 0/1)
+
+no shutdown : confirmar (dentro do interface gigabitEthernet 0/1)
+
+copy running-config startup-config : para salva as configurações do equipamento (dentro do configure terminal)
+
+ip route : direcionar o caminho para o ip (colocar a rede e com quem ele ira trocar informações) (dentro do configure terminal)
+
+no : ever para cancelar qualquer comando errado (pode ser dentro de qualquer comando)
