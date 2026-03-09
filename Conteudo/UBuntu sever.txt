@@ -1,0 +1,76 @@
+UBuntu sever
+
+=11= Comandos=11=
+
+Clear: Limpa a tela 
+
+CD: vC volta 1 diretório (Pasta e etc).
+
+LS:  mostras o que esta acontecendo (usar a o fim de um de codigo
+
+touch "nome: para criar um arquivo . 
+
+Sudo: usuario administrador.
+
+Sudo Su = transforma o usuário atual em adon.
+
+nano "arquivo" = escrever do dontro arquivo
+
+cat = visualizar arquivo 
+
+cd /home/xm4 = para entra no diretorio
+
+mk dir documnetos = para criar uma pasta
+
+mk dir documnetos -v = o v- mostra o que voce esta fazendo
+
+cd batata = entr4a na pasta 
+
+cp aula.txt test.txt = mudar o nome da copia do arquivo
+
+rm aula.text = deletar arquivos
+
+rm -r = apaga a pasta e o arquivo junto   
+
+mv = mover arquivo 
+
+control c = interroper qualque processo 
+
+cd etc/netplan : para configurar a rede
+
+codigo: network: (tab)versions: (tab) 2 (tab)renderer: networkd (tab)ethernet: (tab2x)enpos0s3: (tab3x)dhcp4: (tab)yes (tab3x)enpos0s3: (tab3x)dhcp4: (tab)no (tab3x)dhcp6: (tab)no  (tab3x)addresse: [192.168.2.1/24]
+
+# : para marca comentarios detro da linha de codigo 
+
+ctrl o : salva o arquivo
+
+crtl x : sair do arquivo
+
+ip a : mostra as placas de redes
+
+netplan try : 
+
+nano sysctl.conf : arquivo de confirmação da rede 
+
+sysctl -p: para aplicar a cofiguração
+
+apt-get :  para intalar algum pacote
+
+ip a : verificar a rede
+
+modo brige: sever para interpretar como outro computador dentro do sistema
+
+-t : usado para especificar O TIPO DE REDE
+
+iptables -t nat -A POSTROUTING -o enps0s3 -j MASQUERADE: para mudar a rede , especificar que tipo de rede , qual placa de rede sera E
+
+iptables-save > /etc/iptables/rules.v4
+
+init 6 : uns dos modos de reiniciar a rede
+
+apt-get install iptables-persistent -y : para instalar o pacote aptable
+
+iptables -t nat -l: 
+
+ip do seveidor : 192.168.2.1
+
